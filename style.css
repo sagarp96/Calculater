@@ -1,39 +1,49 @@
 
 body{
     background-color: rgb(243, 238, 252);
+    
 }
 
 .calculaterContainer{
     margin:auto;
-    height:600px;
-    width: 500px;
+    height:524px;
+    width: 400px;
     border: 2px solid rgb(96 139 168);
     border-style:ridge;
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
-    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
 }
 .Screen{
+    display: flex;
     height:200px;
     width: 500px;
     border: 2px solid rgb(96 139 168);
     border-style:ridge;
-    /* display: flex; */
-}
-.Buttons{
-    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 200px;
-    height: 50px;
-    gap: 2px;
-
-
+    display: flex;
+    flex: 1 1 0;
+    
 }
-.Buttons > *{
-    height:30px;
-    width: 30px;
-    border: 2px solid rgb(96 139 168);
-    border-style:ridge;
+
+.Screen > * {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.lowerContainer{
+    background-color: rgb(177, 195, 185);
+    height:320px;
+    width: 500px;
+    display: flex;
+    
+}
+.NumberButtons > *{
+    margin-left: 0.9px;
+    height:80px;
+    width: 96px;
+    border: 1px solid rgb(96 139 168);
     background-color: bisque;
 }
