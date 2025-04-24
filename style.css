@@ -6,44 +6,57 @@ body{
 
 .calculaterContainer{
     margin:auto;
-    height:524px;
-    width: 400px;
+    height:253px;
+    width: 150px;
     border: 2px solid rgb(96 139 168);
     border-style:ridge;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
 }
 .Screen{
     display: flex;
-    height:200px;
+    height:60px;
     width: 500px;
     border: 2px solid rgb(96 139 168);
     border-style:ridge;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
-    display: flex;
-    flex: 1 1 0;
-    
+    /* flex: 1 1 0; */
 }
 
 .Screen > * {
     font-size: 25px;
     font-weight: bold;
-    text-align: center;
+    text-align: start;
 }
 .lowerContainer{
-    background-color: rgb(177, 195, 185);
-    height:320px;
-    width: 500px;
+    height: 190px;
+    width: 150px;
     display: flex;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Add this */
+    align-content: space-between; /* Add this */
 }
-.NumberButtons > *{
-    margin-left: 0.9px;
-    height:80px;
-    width: 96px;
+
+.lowerContainer > *{
+    height: 38px; /* 190px ÷ 5 rows = 38px per button */
+    width: 37.5px; /* 150px ÷ 4 columns = 37.5px per button */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     border: 1px solid rgb(96 139 168);
-    background-color: bisque;
+    flex-shrink: 0; /* Prevent shrinking */
+    flex-grow: 0; /* Prevent growing */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.lowerContainer button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+

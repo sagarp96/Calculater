@@ -4,21 +4,11 @@ let scnd_Num=[];
 let OPR_Sign=[];
 let operandArray=[];
 let finalResult='';
-
-// console.log('currentDisplaynumber:', currentDisplaynumber)
-
-// console.log('scnd_Num:', scnd_Num);
-// console.log('OPR_Sign:', OPR_Sign);
-// console.log('operandArray:', operandArray);
-
 function getClickednum(button){
     let currentDisplaynumber=button.innerHTML;
     storeNum(currentDisplaynumber);
     Display(currentDisplaynumber);
-    // console.log('frst_Num:', frst_Num);
-    // console.log('secondNum', scnd_Num);
 }
-//Working
 
 function storeNum(Num){
     if (operandArray.length == 0 && scnd_Num.length==0){
@@ -145,3 +135,5 @@ function clearDisplay(){
     const screen=document.getElementById('ScreenContainer');
     screen.innerHTML = ''; // This removes all children elements
 }
+
+
