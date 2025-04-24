@@ -1,62 +1,104 @@
-
-body{
+body {
     background-color: rgb(243, 238, 252);
-    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-.calculaterContainer{
-    margin:auto;
-    height:253px;
-    width: 150px;
+.calculaterContainer {
+    margin: auto;
+    width: 300px; /* Increased width */
     border: 2px solid rgb(96 139 168);
-    border-style:ridge;
+    border-style: ridge;
     display: flex;
-    flex-wrap: wrap;
-}
-.Screen{
-    display: flex;
-    height:60px;
-    width: 500px;
-    border: 2px solid rgb(96 139 168);
-    border-style:ridge;
-    justify-content: start;
-    flex-wrap: wrap;
-    /* flex: 1 1 0; */
+    flex-direction: column; /* Change to column */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.Screen > * {
-    font-size: 25px;
+.Screen {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid rgb(96 139 168);
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.Screen p {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
     font-weight: bold;
-    text-align: start;
 }
-.lowerContainer{
-    height: 190px;
-    width: 150px;
+
+.Display {
+    display: inline;
+}
+
+.lowerContainer {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between; /* Add this */
-    align-content: space-between; /* Add this */
+    justify-content: space-between;
 }
 
-.lowerContainer > *{
-    height: 38px; /* 190px ÷ 5 rows = 38px per button */
-    width: 37.5px; /* 150px ÷ 4 columns = 37.5px per button */
+.lowerContainer > * {
+    height: 60px; /* Taller buttons */
+    width: 25%; /* Each button takes 25% width (4 columns) */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: 1px solid rgb(96 139 168);
-    flex-shrink: 0; /* Prevent shrinking */
-    flex-grow: 0; /* Prevent growing */
-    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .lowerContainer button {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.lowerContainer button:hover {
+    background-color: #e0e0e0;
+}
+
+.AC {
+    background-color: rgb(226, 128, 195) !important;
+    font-weight: bold !important;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .calculaterContainer {
+        width: 90%; /* Use 90% of screen width on mobile */
+        max-width: 350px;
+    }
+    
+    .lowerContainer > * {
+        height: 50px; /* Slightly smaller on mobile */
+    }
 }
 
 

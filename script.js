@@ -28,12 +28,20 @@ function storeNum(Num){
 
 }
     function Display(displayNum){
-        //ek number ahyega aur hum usse display pe laadege 
-        const screen=document.getElementById('ScreenContainer');
-        const currentScreenValue=document.createElement("p");
-        currentScreenValue.classList.add('Display')
-        currentScreenValue.innerHTML+=displayNum;
-        screen.appendChild(currentScreenValue);
+        const screen = document.getElementById('ScreenContainer');
+        
+        // Check if there's already a display element
+        let displayElement = screen.querySelector('.DisplayContainer');
+        
+        // If no display container exists, create one
+        if (!displayElement) {
+            displayElement = document.createElement("div");
+            displayElement.classList.add('DisplayContainer');
+            screen.appendChild(displayElement);
+        }
+        
+        // Update the display content by appending to the existing text
+        displayElement.textContent += displayNum;
     }
 
 function getOperands(button){
